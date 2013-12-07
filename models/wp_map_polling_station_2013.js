@@ -1,98 +1,93 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('wp_map_national_election_2013', { 
-    code: {
-      type: DataTypes.INTEGER(2),
-      allowNull: true,
+  return sequelize.define('wp_map_polling_station_2013', { 
+    shape_id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
       defaultValue: null
     },
-    name: {
+    province: {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: null
     },
-    kh_name: {
+    province_kh: {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: null
     },
-    eligible_voters: {
+    district: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    district_kh: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    commune: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    commune_kh: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    village: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    village_kh: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    polling_station_name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    polling_station_name_kh: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    num_polling_station: {
       type: DataTypes.INTEGER(11),
       allowNull: true,
       defaultValue: null
     },
-    registered_voters: {
+    polling_station_old_code: {
       type: DataTypes.INTEGER(11),
       allowNull: true,
       defaultValue: null
     },
-    valid_voters: {
+    polling_station_code_2012: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      defaultValue: '0'
+    },
+    registed_voters_2011: {
       type: DataTypes.INTEGER(11),
       allowNull: true,
       defaultValue: null
     },
-    valid_vote: {
+    registed_voters_2012: {
       type: DataTypes.INTEGER(11),
       allowNull: true,
       defaultValue: null
     },
-    total_seat: {
+    num_voters_deleted: {
       type: DataTypes.INTEGER(11),
       allowNull: true,
       defaultValue: null
     },
-    party_cnp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    party_fcp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    party_rdp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    party_cpp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    party_edp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    party_kapp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    party_cnrp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    party_ldp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    seat_cpp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    seat_cnrp: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    total: {
+    total_voters: {
       type: DataTypes.INTEGER(11),
       allowNull: true,
       defaultValue: null
@@ -100,6 +95,11 @@ module.exports = function(sequelize, DataTypes) {
     related_docs: {
       type: DataTypes.STRING,
       allowNull: true,
+      defaultValue: null
+    },
+    coords: {
+      type: 'GEOMETRY',
+      allowNull: false,
       defaultValue: null
     },
     last_update: {

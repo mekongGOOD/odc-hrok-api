@@ -1,45 +1,50 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('wp_map_national_election_2013', { 
-    code: {
+  return sequelize.define('wp_map_national_election_2013_vote_in_communes', { 
+    shape_id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      defaultValue: null
+    },
+    c_code: {
+      type: DataTypes.INTEGER(6),
+      allowNull: true,
+      defaultValue: null
+    },
+    c_name_en: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    c_tier_kh: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null
+    },
+    c_name_kh: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: null
+    },
+    d_code: {
+      type: DataTypes.INTEGER(4),
+      allowNull: false,
+      defaultValue: null
+    },
+    p_code: {
       type: DataTypes.INTEGER(2),
-      allowNull: true,
+      allowNull: false,
       defaultValue: null
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      defaultValue: null
-    },
-    kh_name: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      defaultValue: null
-    },
-    eligible_voters: {
+    num_polling: {
       type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    registered_voters: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    valid_voters: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
+      allowNull: false,
       defaultValue: null
     },
     valid_vote: {
       type: DataTypes.INTEGER(11),
-      allowNull: true,
-      defaultValue: null
-    },
-    total_seat: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
+      allowNull: false,
       defaultValue: null
     },
     party_cnp: {
@@ -82,24 +87,39 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       defaultValue: null
     },
-    seat_cpp: {
+    cpp_margin: {
       type: DataTypes.INTEGER(11),
       allowNull: true,
       defaultValue: null
     },
-    seat_cnrp: {
-      type: DataTypes.INTEGER(11),
+    percent_cpp: {
+      type: 'DOUBLE',
+      allowNull: false,
+      defaultValue: null
+    },
+    percent_cnrp: {
+      type: 'DOUBLE',
+      allowNull: false,
+      defaultValue: null
+    },
+    winner: {
+      type: DataTypes.STRING,
       allowNull: true,
       defaultValue: null
     },
-    total: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
+    coords: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      defaultValue: null
+    },
+    inner_coords: {
+      type: DataTypes.TEXT,
+      allowNull: false,
       defaultValue: null
     },
     related_docs: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       defaultValue: null
     },
     last_update: {
