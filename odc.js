@@ -22,7 +22,6 @@ function lowerCase(obj) {
        newObj[key.toLowerCase()] = obj[key]
     }
   }
-  console.log(obj);
   return newObj;
 }
 
@@ -51,12 +50,12 @@ server.get('/census/2013/election', findAll.bind(models.wp_map_national_election
 
 server.get('/census/1998/commune/:code', findOne.bind(models.wp_map_census_1998_communes));
 server.get('/census/1998/communes', findAll.bind(models.wp_map_census_1998_communes));
-//server.get('/census/1998/districts/:code', findOne.bind(wp_map_census_1998_districts));
-//server.get('/census/1998/districts', findAll.bind(wp_map_census_1998_districts));
-//server.get('/census/1998/provinces/:code', findOne.bind(wp_map_census_1998_provinces));
-//server.get('/census/1998/provinces', findAll.bind(wp_map_census_1998_provinces));
-//server.get('/census/1998/villages/:code', findOne.bind(wp_map_census_1998_villages));
-//server.get('/census/1998/villages', findAll.bind(wp_map_census_1998_villages));
+server.get('/census/1998/districts/:code', findOne.bind(models.wp_map_census_1998_districts));
+server.get('/census/1998/districts', findAll.bind(models.wp_map_census_1998_districts));
+server.get('/census/1998/provinces/:code', findOne.bind(models.wp_map_census_1998_provinces));
+server.get('/census/1998/provinces', findAll.bind(models.wp_map_census_1998_provinces));
+server.get('/census/1998/villages/:code', findOne.bind(models.wp_map_census_1998_villages));
+server.get('/census/1998/villages', findAll.bind(models.wp_map_census_1998_villages));
 
 server.get('/census/2008/commune/:code', findOne.bind(models.wp_map_census_2008_communes));
 server.get('/census/2008/communes', findAll.bind(models.wp_map_census_2008_communes));
