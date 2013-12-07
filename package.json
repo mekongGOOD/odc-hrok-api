@@ -1,0 +1,13 @@
+{
+    "name": "ProductsAPI",
+    "version": "0.0.1",
+    "main": "server",
+    "engines": {
+        "node": ">=0.10.5"
+    },
+    "dependencies": {
+        "sequelize":"latest"
+        , "restify":"latest"
+    },
+    "private": "true"
+}
