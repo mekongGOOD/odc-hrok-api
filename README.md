@@ -46,10 +46,10 @@ The Open Data movement is based on the simple premise that data collected for pu
 5. Run the server:
 
   `cd odc-hrok-api
-  nodejs odc.js '
+  nodejs odc.js`
   
-  Yu shold see something like;
-  'restify listening at http://0.0.0.0:9090`
+  You shold see something like;
+  `restify listening at http://0.0.0.0:9090`
   
 6. Test out the API...to retrieve the census 2008 data (by district) use the following URL in your web browser:
 
