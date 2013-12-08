@@ -1,8 +1,8 @@
 #Introduction
 
-This is...
+This is an API for [Open Development Cambodia (ODC)](http://www.opendevelopmentcambodia.net/ ""). This code has been developed as part of RHoK Sydney Event for Open Development Cambodia over a weekend event on 7 & 8 December 2013.
 
-This code/document as part of HROK Sydney Event for Open Development Cambodia over a weekend event on 7 & 8 December 2013.
+The Random Hacks of Kindess (RHoK) url is [http://www.rhoksydney.org/](http://www.rhoksydney.org/ "").
 
 
 ![rhok.png](_markdown_images/rhok.png "")
