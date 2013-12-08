@@ -37,11 +37,7 @@ The Open Data movement is based on the simple premise that data collected for pu
 
   `git clone https://github.com/mekongGOOD/odc-hrok-api`
   
-<<<<<<< HEAD
-4. Configure the database settings in models/index.js so that it is suitable for your environment:
-=======
 4. Configure the database settings in models/index.js with **your** database access details:
->>>>>>> 57d30b0b6da6fb8e253ee022cf32fa289dbeacd7
 
   `var db = 'xxxx';  
   var userName = 'xxxxx';  
@@ -68,11 +64,7 @@ The Open Data movement is based on the simple premise that data collected for pu
 
 ##Adding new datasets (database tables)
 
-<<<<<<< HEAD
-If a new table is added to the database then run the following script.
-=======
 1. After a new mySQL database table is added, then run the following script.
->>>>>>> 57d30b0b6da6fb8e253ee022cf32fa289dbeacd7
 
 Each of the datasets are mapped using a library for NodeJS called sequelize (http://sequelizejs.com/documentation).
 
