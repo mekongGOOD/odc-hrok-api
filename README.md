@@ -2,14 +2,14 @@
 
 This is an API for [Open Development Cambodia (ODC)](http://www.opendevelopmentcambodia.net/ ""). This code has been developed as part of RHoK Sydney Event for Open Development Cambodia over a weekend event on 7 & 8 December 2013.
 
-The Random Hacks of Kindess (RHoK) url is [http://www.rhoksydney.org/](http://www.rhoksydney.org/ "").
+The Random Hacks of Kindness (RHoK) url is [http://www.rhoksydney.org/](http://www.rhoksydney.org/ "").
 
 <br/>
 <hr/>
 
 ![rhok.png](_markdown_images/rhok.png "")
 ##What is RHoK?
-RHoK is a global hackathon that takes part twice a year. RHoK bringstogether thousands of people around the world to create open source solutions that can save lives and alleviate suffering. 
+RHoK is a global hackathon that takes part twice a year. RHoK brings together thousands of people around the world to create open source solutions that can save lives and alleviate suffering. 
 
 RHoK Sydney events encourage participants to develop solutions that can be used, in particular, to help people prepare for and respond to natural disasters.
 
@@ -37,7 +37,7 @@ The Open Data movement is based on the simple premise that data collected for pu
 
   `~/rhok$ git clone https://github.com/mekongGOOD/odc-hrok-api`
   
-4. Configure the database settings in models/index.js so that it is suitable for the environment:
+4. Configure the database settings in models/index.js so that it is suitable for your environment:
 
   `var db = 'odc';  
   var userName = 'test';  
@@ -59,7 +59,7 @@ The Open Data movement is based on the simple premise that data collected for pu
 
 ##Adding new datasets (database tables)
 
-1. If a new table is added to the database then run the following script.
+If a new table is added to the database then run the following script.
 
 Each of the datasets are mapped using a library for NodeJS called sequelize (http://sequelizejs.com/documentation).
 
