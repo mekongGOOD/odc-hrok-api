@@ -26,9 +26,15 @@ function lowerCase(obj) {
 }
 
 function findOne(req, res, next) {
-  console.log(this);
-  var codeValue = req.params.code
-  this.findAll({ where: { code: codeValue } }).success(function(result) {
+  var codeValue = req.params.code;
+  for (var primaryKey in this.primaryKeys) {
+	    // object[prop]
+	    break;
+  }
+  queryDict = {};
+  queryDict[primaryKey] = codeValue
+  console.log("queryDict=" + queryDict);
+  this.findAll({ where: queryDict }).success(function(result) {
       res.send(lowerCase(result[0]));
   });
 }
@@ -53,7 +59,7 @@ function findAll(req, res, next) {
 	  }
 	  for (var i = 0; i < queryable.length; i++) {
 		  if (queryable[i].toLowerCase() === key.toLowerCase()) {
-			  queryDict[key] = req.params[key]
+			  queryDict[key] = req.params["key"];
 		  }
 	  }
   }
