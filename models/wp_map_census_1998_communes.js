@@ -6,7 +6,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: null,
-	  canQuery : true
+	  canQuery : true,
+	  primaryKey: true
     },
     NAME: {
       type: DataTypes.STRING,

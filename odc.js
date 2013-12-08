@@ -26,6 +26,7 @@ function lowerCase(obj) {
 }
 
 function findOne(req, res, next) {
+  console.log(this);
   var codeValue = req.params.code
   this.findAll({ where: { code: codeValue } }).success(function(result) {
       res.send(lowerCase(result[0]));
