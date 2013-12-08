@@ -7,5 +7,5 @@ if [ "$1" == "--help" ]
 then
 	echo "Usage: $0"
 else
-	node odc.js
+	node ../odc.js
 fi
