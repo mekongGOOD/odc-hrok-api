@@ -34,14 +34,18 @@ The Open Data movement is based on the simple premise that data collected for pu
 
   `~/rhok$ git clone https://github.com/mekongGOOD/odc-hrok-api`
   
-4. Configure the database settings in models/indexj.js:
+4. Configure the database settings in models/index.js so that it is suitable for the environment:
 
-4. Run the server:
+  `var db = 'odc';  
+  var userName = 'test';  
+  var password = 'test';`  
+
+5. Run the server:
 
   `~/rhok/odc-hrok-api$ nodejs odc.js  
   restify listening at http://0.0.0.0:9090`
   
-5. Test out the webservice! To retrieve the census 2008 data (by district) use the following URL:
+6. Test out the webservice! To retrieve the census 2008 data (by district) use the following URL:
 
   `http://localhost:9090/census/2008/districts`
   
