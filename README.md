@@ -80,7 +80,7 @@ Each of the datasets are mapped using a library for NodeJS called sequelize (htt
 	
 **Developers**
 <br/>Laurie Tuch
-<br/>Tri Pham
+<br/>Tri-Hanh Pham
 	
 **Project Leader**
 <br/>Ian Scrivener
