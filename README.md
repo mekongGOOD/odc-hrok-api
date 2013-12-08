@@ -64,10 +64,34 @@ The Open Data movement is based on the simple premise that data collected for pu
 
 ##Adding new datasets (database tables)
 
-1. After a new mySQL database table is added, then run the following script.
+After a new mySQL database table is added, then perform the following steps:
 
-Each of the datasets are mapped using a library for NodeJS called sequelize (http://sequelizejs.com/documentation).
+1. Run the sequelize auto script:
+ 
+  `node_modules/sequelize-auto/bin/sequelize-auto -h localhost -d <database> -u <userName> -x <password> -o models`
+ 
+  This will generate mapping into the models directory.
+  
+2. Modify the generated models to remove unnecessary attributes and to set primary keys. The primary key will be used to lookup individual records from the table.
+ 
+3. Add URL mappings into the odc.js file. The following example is for the `wp_map_national_election_2013` table.
+ 
+  `server.get('/census/2013/election', findAll.bind(models.wp_map_national_election_2013));`
+  
+  This allow us to look up all election results.
+ 
+  `server.get('/census/2013/election/:code', findOne.bind(models.wp_map_national_election_2013));`
+  
+  This allow us to look up election results for a particular id (the ID is the primary key of the table).
+  
+4. Commit changes to git:
 
+  `git commit -a  
+  git push`
+
+    
+  
+  
 <hr/>
 ##The RHOK Team
 
