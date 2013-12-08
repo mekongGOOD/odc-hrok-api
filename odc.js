@@ -72,7 +72,15 @@ function findAll(req, res, next) {
 console.log(models.wp_ai1ec_event_category_colors);
 
 var server = restify.createServer();
+server.use(restify.CORS());
 server.use(restify.queryParser());
+server.use(
+  function crossOrigin(req,res,next){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    return next();
+  }
+);
 
 server.get('/census/2013/election/:code', findOne.bind(models.wp_map_national_election_2013));
 server.get('/census/2013/election', findAll.bind(models.wp_map_national_election_2013));
@@ -94,7 +102,6 @@ server.get('/census/2008/provinces/:code', findOne.bind(models.wp_map_census_200
 server.get('/census/2008/provinces', findAll.bind(models.wp_map_census_2008_provinces));
 server.get('/census/2008/villages/:code', findOne.bind(models.wp_map_census_2008_villages));
 server.get('/census/2008/villages', findAll.bind(models.wp_map_census_2008_villages));
-
 
 server.listen(9090, function() {
   console.log('%s listening at %s', server.name, server.url);
