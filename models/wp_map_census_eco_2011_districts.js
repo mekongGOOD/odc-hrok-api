@@ -2,25 +2,23 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('wp_map_census_eco_2011_districts', { 
-    shape_id: {
-      type: DataTypes.INTEGER(11),
-      allowNull: false,
-      defaultValue: null
-    },
     code_id: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: null
+      defaultValue: null,
+	  canQuery : true
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: null
+      defaultValue: null,
+	  canQuery : true
     },
     establishments_num: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      defaultValue: null
+      defaultValue: null,
+	  canQuery : true
     },
     total_persons_engaged: {
       type: DataTypes.INTEGER(11),
@@ -34,16 +32,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     female_persons_engaged: {
       type: DataTypes.INTEGER(11),
-      allowNull: false,
-      defaultValue: null
-    },
-    coords: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      defaultValue: null
-    },
-    inner_coords: {
-      type: DataTypes.TEXT,
       allowNull: false,
       defaultValue: null
     },
