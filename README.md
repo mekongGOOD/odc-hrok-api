@@ -1,4 +1,3 @@
-
 #Introduction
 
 This is...
@@ -21,7 +20,7 @@ The Open Data movement is based on the simple premise that data collected for pu
 <hr/>
 #Instructions
 
-##Installing node.js and the sourcecode
+##Installing node.js, this sourcecode and running this app!!
 
 
 ##Adding new datasets (database tables)
