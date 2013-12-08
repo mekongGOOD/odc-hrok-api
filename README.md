@@ -104,7 +104,7 @@ After a new mySQL database table is added, then perform the following steps:
 	
 **Developers**
 <br/>Laurie Tuch
-<br/>Tri Pham
+<br/>Tri-Hanh Pham
 	
 **Project Leader**
 <br/>Ian Scrivener
