@@ -53,7 +53,7 @@ function findAll(req, res, next) {
 	  }
 	  for (var i = 0; i < queryable.length; i++) {
 		  if (queryable[i].toLowerCase() === key.toLowerCase()) {
-			  queryDict[key] = req.params["key"];
+			  queryDict[key] = req.params[key];
 		  }
 	  }
   }
