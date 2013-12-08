@@ -1,9 +1,11 @@
-#Introduction
+##Introduction
 
-This is...
+This is an API for [Open Development Cambodia (ODC)](http://www.opendevelopmentcambodia.net/ ""). This code has been developed as part of RHoK Sydney Event for Open Development Cambodia over a weekend event on 7 & 8 December 2013.
 
-This code/document as part of HROK Sydney Event for Open Development Cambodia over a weekend event on 7 & 8 December 2013.
+The Random Hacks of Kindess (RHoK) url is [http://www.rhoksydney.org/](http://www.rhoksydney.org/ "").
 
+<br/>
+<hr/>
 
 ![rhok.png](_markdown_images/rhok.png "")
 ##What is RHoK?
@@ -17,6 +19,7 @@ Open Development Cambodia (ODC) is an non-prfot organisation based in Phnom Penh
 
 The Open Data movement is based on the simple premise that data collected for public interest should be publicly available to everyone to use and republish as they wish – without restrictions. ODC does not promote any particular perspective, agenda or bias other than to provide objective information about Cambodia and its development.
 
+<br/>
 <hr/>
 #Instructions
 
@@ -61,7 +64,7 @@ The Open Data movement is based on the simple premise that data collected for pu
 Each of the datasets are mapped using a library for NodeJS called sequelize (http://sequelizejs.com/documentation).
 
 <hr/>
-#The RHOK Team
+##The RHOK Team
 
     
 **Analysts/Consultants**
