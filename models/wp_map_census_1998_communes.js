@@ -2,20 +2,18 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('wp_map_census_1998_communes', { 
-    shape_id: {
-      type: DataTypes.INTEGER(11),
-      allowNull: false,
-      defaultValue: null
-    },
     CODE: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: null
+      defaultValue: null,
+	  canQuery : true,
+	  primaryKey: true
     },
     NAME: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: null
+      defaultValue: null,
+      canQuery: true
     },
     TOTPOP: {
       type: DataTypes.FLOAT,
@@ -220,12 +218,8 @@ module.exports = function(sequelize, DataTypes) {
     YEAR: {
       type: DataTypes.FLOAT,
       allowNull: false,
-      defaultValue: '2008'
-    },
-    coords: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      defaultValue: null
+      defaultValue: '2008',
+	  canQuery : true
     },
     related_docs: {
       type: DataTypes.STRING,

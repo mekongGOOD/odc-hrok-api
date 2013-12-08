@@ -1,11 +1,7 @@
 
 var restify = require('restify');
 var Sequelize = require('sequelize');
-
-
 var models = require('./models');
-
-
 
 function lowerCaseList(list) {
   newList = []  
@@ -26,8 +22,14 @@ function lowerCase(obj) {
 }
 
 function findOne(req, res, next) {
-  var codeValue = req.params.code
-  this.findAll({ where: { code: codeValue } }).success(function(result) {
+  var codeValue = req.params.code;
+  for (var primaryKey in this.primaryKeys) {
+	    break;
+  }
+  queryDict = {};
+  queryDict[primaryKey] = codeValue
+  console.log("queryDict=" + queryDict);
+  this.findAll({ where: queryDict }).success(function(result) {
       res.send(lowerCase(result[0]));
   });
 }
@@ -35,7 +37,28 @@ function findOne(req, res, next) {
 function findAll(req, res, next) {
   var perPage = req.params.hasOwnProperty("per_page") ? req.params.per_page : 10;
   var page = req.params.hasOwnProperty("page") ? req.params.page : 0;
-  this.findAll({offset: perPage * page, limit: perPage}).success(function(result) {
+  var queryable = []
+  for (var key in this.rawAttributes) {
+	  if (this.rawAttributes[key].hasOwnProperty("canQuery")) {
+		  queryable.push(key);
+	  }
+  }
+  console.log("queryable=" + queryable);
+  queryDict = {}
+  for (var key in req.params) {
+	  console.log("key:" + key);
+	  if (key === "per_page" || key === "page") {
+		  console.log("skipping");
+		  continue;
+	  }
+	  for (var i = 0; i < queryable.length; i++) {
+		  if (queryable[i].toLowerCase() === key.toLowerCase()) {
+			  queryDict[key] = req.params[key];
+		  }
+	  }
+  }
+  console.log(queryDict);
+  this.findAll({where: queryDict, offset: perPage * page, limit: perPage}).success(function(result) {
       res.send(lowerCaseList(result));
   });
 }
@@ -70,4 +93,3 @@ server.get('/census/2008/villages', findAll.bind(models.wp_map_census_2008_villa
 server.listen(9090, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
-

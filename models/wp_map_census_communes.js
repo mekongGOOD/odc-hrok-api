@@ -2,25 +2,17 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('wp_map_census_communes', { 
-    shape_id: {
-      type: DataTypes.INTEGER(11),
-      allowNull: false,
-      defaultValue: null
-    },
     commune_id: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: null
+      defaultValue: null,
+	  canQuery : true
     },
     commune_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: null
-    },
-    coords: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      defaultValue: null
+      defaultValue: null,
+	  canQuery : true
     },
     related_docs: {
       type: DataTypes.STRING,
