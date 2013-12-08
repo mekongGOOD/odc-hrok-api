@@ -1,5 +1,5 @@
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('odc', 'root' , 'tritri', {
+var sequelize = new Sequelize('odc', 'test' , 'test', {
   define: {
     freezeTableName: true
   }

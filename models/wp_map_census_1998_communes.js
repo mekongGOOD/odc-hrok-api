@@ -12,11 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: null,
-<<<<<<< HEAD
       canQuery: true
-=======
-	  canQuery : true
->>>>>>> 9a43a6a46161bd62f586d5c906471260d632b8da
     },
     TOTPOP: {
       type: DataTypes.FLOAT,
