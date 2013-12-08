@@ -4,6 +4,8 @@ This is an API for [Open Development Cambodia (ODC)](http://www.opendevelopmentc
 
 The Random Hacks of Kindess (RHoK) url is [http://www.rhoksydney.org/](http://www.rhoksydney.org/ "").
 
+<br/>
+<hr/>
 
 ![rhok.png](_markdown_images/rhok.png "")
 ##What is RHoK?
@@ -17,6 +19,7 @@ Open Development Cambodia (ODC) is an non-prfot organisation based in Phnom Penh
 
 The Open Data movement is based on the simple premise that data collected for public interest should be publicly available to everyone to use and republish as they wish – without restrictions. ODC does not promote any particular perspective, agenda or bias other than to provide objective information about Cambodia and its development.
 
+<br/>
 <hr/>
 #Instructions
 
@@ -25,6 +28,7 @@ The Open Data movement is based on the simple premise that data collected for pu
 
 ##Adding new datasets (database tables)
 
+<br/>
 <hr/>
 #The RHOK Team
 
