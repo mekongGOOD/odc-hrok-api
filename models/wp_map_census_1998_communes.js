@@ -15,7 +15,8 @@ module.exports = function(sequelize, DataTypes) {
     NAME: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: null
+      defaultValue: null,
+      canQuery: true
     },
     TOTPOP: {
       type: DataTypes.FLOAT,

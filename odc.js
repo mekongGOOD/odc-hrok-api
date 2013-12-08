@@ -35,7 +35,29 @@ function findOne(req, res, next) {
 function findAll(req, res, next) {
   var perPage = req.params.hasOwnProperty("per_page") ? req.params.per_page : 10;
   var page = req.params.hasOwnProperty("page") ? req.params.page : 0;
-  this.findAll({offset: perPage * page, limit: perPage}).success(function(result) {
+//  console.log(this);
+  var queryable = []
+  for (var key in this.rawAttributes) {
+	  if (this.rawAttributes[key].hasOwnProperty("canQuery")) {
+		  queryable.push(key);
+	  }
+  }
+  console.log("queryable=" + queryable);
+  queryDict = {}
+  for (var key in req.params) {
+	  console.log("key:" + key);
+	  if (key === "per_page" || key === "page") {
+		  console.log("skipping");
+		  continue;
+	  }
+	  for (var i = 0; i < queryable.length; i++) {
+		  if (queryable[i].toLowerCase() === key.toLowerCase()) {
+			  queryDict[key] = req.params[key]
+		  }
+	  }
+  }
+  console.log(queryDict);
+  this.findAll({where: queryDict, offset: perPage * page, limit: perPage}).success(function(result) {
       res.send(lowerCaseList(result));
   });
 }
