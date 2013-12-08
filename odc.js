@@ -63,8 +63,6 @@ function findAll(req, res, next) {
   });
 }
 
-console.log(models.wp_ai1ec_event_category_colors);
-
 var server = restify.createServer();
 server.use(restify.CORS());
 server.use(restify.queryParser());

@@ -22,8 +22,39 @@ The Open Data movement is based on the simple premise that data collected for pu
 
 ##Installing node.js, this sourcecode and running this app!!
 
+1. Install git:
+
+  `sudo apt-get install git`
+
+2. Install nodejs:
+
+  `sudo apt-get install nodejs`
+
+3. Clone the git repository:
+
+  `~/rhok$ git clone https://github.com/mekongGOOD/odc-hrok-api`
+  
+4. Configure the database settings in models/indexj.js:
+
+4. Run the server:
+
+  `~/rhok/odc-hrok-api$ nodejs odc.js  
+  restify listening at http://0.0.0.0:9090`
+  
+5. Test out the webservice! To retrieve the census 2008 data (by district) use the following URL:
+
+  `http://localhost:9090/census/2008/districts`
+  
+  You should see some output like the following:
+
+  `[{"code":"0102", "name":"Mongkol Borei", "totpop":139315, "males":67967, "females":71348, "density":172.6, "sexratio":95.3, "t_lit15":84.27, "m_lit15":90.61, "f_lit15":78.52, "dependency":67, "pop1564":83406, "mal1564":39950, "fem1564":43456, "fem1549":35905, "tothh":29113, "avg_hs":4.8, "fheads":21.7, "cw_ratio":402.6, "d_own":26930, "d_rent":132, "d_free":1837, "d_oth":151, "t_active":61.08, "m_active":63.95, "f_active":58.38, "t_primsec":77.98, "t_secsec":6.72, "t_tersec":15.31, "m_primsec":75.39, "m_secsec":7.87, "m_tersec":16.74, "f_primsec":80.67, "f_secsec":5.52, "f_tersec":13.81, "t_attend":30.05, "m_attend":32.17, "f_attend":28.05, "t_noeduc":0, "m_noeduc":405, "f_noeduc":576, "m_see":367, "m_speak":116, "m_hear":104, "m_move":804, "m_mental":213, "f_see":375, "f_speak":107, "f_hear":114, "f_move":463, "f_mental":197, "t_uer":1.55, "m_uer":1.16, "f_uer":1.95, "year":2008, "related_docs":"", "last_update":"2012-08-02T03:02:14.000Z"}, ...`
+  
 
 ##Adding new datasets (database tables)
+
+1. If a new table is added to the database then run the following script.
+
+Each of the datasets are mapped using a library for NodeJS called sequelize (http://sequelizejs.com/documentation).
 
 <hr/>
 #The RHOK Team
@@ -36,7 +67,7 @@ The Open Data movement is based on the simple premise that data collected for pu
 <br/>Mark Collins
 	
 **Developers**
-<br/>Laurie Tuc
+<br/>Laurie Tuch
 <br/>Tri Pham
 	
 **Project Leader**
