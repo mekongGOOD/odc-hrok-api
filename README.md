@@ -45,7 +45,7 @@ The Open Data movement is based on the simple premise that data collected for pu
 
 5. Run the server:
 
-  `cd odc-hrok-api
+  `cd odc-hrok-api;
   nodejs odc.js`
   
   You shold see something like;
