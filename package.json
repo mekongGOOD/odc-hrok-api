@@ -1,5 +1,5 @@
 {
-    "name": "ProductsAPI",
+    "name": "odc-api",
     "version": "0.0.1",
     "main": "server",
     "engines": {
@@ -8,6 +8,7 @@
     "dependencies": {
         "sequelize":"latest"
         , "restify":"latest"
+        , "restify":"mysql"
     },
     "private": "true"
 }
