@@ -74,6 +74,8 @@ server.use(
   }
 );
 
+// Routes for the API
+
 server.get('/census/2013/election/:code', findOne.bind(models.wp_map_national_election_2013));
 server.get('/census/2013/election', findAll.bind(models.wp_map_national_election_2013));
 
@@ -98,3 +100,15 @@ server.get('/census/2008/villages', findAll.bind(models.wp_map_census_2008_villa
 server.listen(9090, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
+
+// File server for static files
+
+var connect = require('connect'),
+http = require('http'),
+directory = 'public';
+
+connect()
+.use(connect.static(directory))
+.listen(80);
+
+console.log('Listening on port 80.');
