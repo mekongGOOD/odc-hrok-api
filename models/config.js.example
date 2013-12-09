@@ -1,0 +1,8 @@
+var config = {}
+
+config.db = 'odc';
+config.userName = 'xxxx';
+config.password = 'xxxx';
+
+module.exports = config;
+

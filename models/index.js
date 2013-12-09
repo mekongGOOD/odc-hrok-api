@@ -1,8 +1,6 @@
 var Sequelize = require('sequelize');
-var db = 'odc';
-var userName = 'hrok';
-var password = 'hrok4good';
-var sequelize = new Sequelize(db, userName , password, {
+var config = require('./config');
+var sequelize = new Sequelize(config.db, config.userName, config.password, {
   define: {
     freezeTableName: true
   }
