@@ -43,9 +43,9 @@ The Open Data movement is based on the simple premise that data collected for pu
 
 4. Configure the database settings in models/config.js with **your** database access details:
 
-  `config.db = 'xxxx';
-  config.userName = 'xxxx';
-  config.password = 'xxxx';
+  `config.db = 'xxxx';  
+  config.userName = 'xxxx';  
+  config.password = 'xxxx';`
 
 5. Run the server:
 
