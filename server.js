@@ -1,24 +1,21 @@
-
 var restify = require('restify');
 var Sequelize = require('sequelize');
 var models = require('./models');
 
+function lowerCase(obj) {
+  var newObj = {}
+  for (var key in obj.values) {
+       newObj[key.toLowerCase()] = obj[key]
+  }
+  return newObj;
+}
+
 function lowerCaseList(list) {
-  newList = []  
-    for (var i = 0; i < list.length; i++) {
+  var newList = []  
+  for (var i = 0; i < list.length; i++) {
       newList.push(lowerCase(list[i]));
   }
   return newList;
-}
-
-function lowerCase(obj) {
-  newObj = {}
-  for(var key in obj.values) {
-    if (obj.hasOwnProperty(key)) {
-       newObj[key.toLowerCase()] = obj[key]
-    }
-  }
-  return newObj;
 }
 
 function findOne(req, res, next) {
@@ -97,18 +94,14 @@ server.get('/census/2008/provinces', findAll.bind(models.wp_map_census_2008_prov
 server.get('/census/2008/villages/:code', findOne.bind(models.wp_map_census_2008_villages));
 server.get('/census/2008/villages', findAll.bind(models.wp_map_census_2008_villages));
 
-server.listen(9090, function() {
+//serve static files n the /public directory
+server.get(/.*/, restify.serveStatic({
+    'directory': 'public',
+    'default': 'index.html'
+}));
+
+
+server.listen(80, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
 
-// File server for static files
-
-var connect = require('connect'),
-http = require('http'),
-directory = 'public';
-
-connect()
-.use(connect.static(directory))
-.listen(80);
-
-console.log('Listening on port 80.');
