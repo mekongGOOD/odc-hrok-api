@@ -36,12 +36,16 @@ The Open Data movement is based on the simple premise that data collected for pu
 3. Clone the git repository:
 
   `git clone https://github.com/mekongGOOD/odc-hrok-api`
-  
-4. Configure the database settings in models/index.js with **your** database access details:
 
-  `var db = 'xxxx';  
-  var userName = 'xxxxx';  
-  var password = 'xxxxx';`  
+4. Copy models/config.js.example to models/config.js.
+
+  `cp models/config.js.example models/config.js`
+
+4. Configure the database settings in models/config.js with **your** database access details:
+
+  `config.db = 'xxxx';
+  config.userName = 'xxxx';
+  config.password = 'xxxx';
 
 5. Run the server:
 
