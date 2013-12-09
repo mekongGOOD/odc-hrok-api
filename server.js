@@ -77,7 +77,7 @@ server.use(
 server.get('/census/2013/election/:code', findOne.bind(models.wp_map_national_election_2013));
 server.get('/census/2013/election', findAll.bind(models.wp_map_national_election_2013));
 
-server.get('/census/1998/commune/:code', findOne.bind(models.wp_map_census_1998_communes));
+server.get('/census/1998/communes/:code', findOne.bind(models.wp_map_census_1998_communes));
 server.get('/census/1998/communes', findAll.bind(models.wp_map_census_1998_communes));
 server.get('/census/1998/districts/:code', findOne.bind(models.wp_map_census_1998_districts));
 server.get('/census/1998/districts', findAll.bind(models.wp_map_census_1998_districts));
@@ -86,7 +86,7 @@ server.get('/census/1998/provinces', findAll.bind(models.wp_map_census_1998_prov
 server.get('/census/1998/villages/:code', findOne.bind(models.wp_map_census_1998_villages));
 server.get('/census/1998/villages', findAll.bind(models.wp_map_census_1998_villages));
 
-server.get('/census/2008/commune/:code', findOne.bind(models.wp_map_census_2008_communes));
+server.get('/census/2008/communes/:code', findOne.bind(models.wp_map_census_2008_communes));
 server.get('/census/2008/communes', findAll.bind(models.wp_map_census_2008_communes));
 server.get('/census/2008/districts/:code', findOne.bind(models.wp_map_census_2008_districts));
 server.get('/census/2008/districts', findAll.bind(models.wp_map_census_2008_districts));
