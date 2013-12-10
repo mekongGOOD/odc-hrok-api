@@ -57,9 +57,13 @@ The Open Data movement is based on the simple premise that data collected for pu
   
   You shold see something like;
   
-  `restify listening at http://0.0.0.0:9090`
+  `restify listening at http://0.0.0.0`
   
-6. **Test the API:** to retrieve the census 2008 data (by district) use the following URL in your web browser:
+6. **Test the API:** 
+
+View the API homepage in your web browser http://mysite.com/
+
+To retrieve the census 2008 data (by district) use the following URL in your web browser:
 
   `http://localhost:9090/census/2008/districts`
   
