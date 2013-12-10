@@ -51,6 +51,8 @@ The Open Data movement is based on the simple premise that data collected for pu
 
   `cd odc-hrok-api`
   
+  `npm install`
+  
   `nodejs odc.js`
   
   You shold see something like;
