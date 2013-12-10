@@ -1,4 +1,4 @@
-var config = require('config');
+var config = require('./config');
 var restify = require('restify');
 var Sequelize = require('sequelize');
 var models = require('./models');
