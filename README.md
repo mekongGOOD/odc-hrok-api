@@ -45,9 +45,9 @@ The Open Data movement is based on the simple premise that data collected for pu
 
 	````javascript
 	var config = {
-	  db: 'odc',
-	  userName: 'root',
-	  password: 'xxxx',
+	  db: 'your_db_name',
+	  userName: 'your_user_name',
+	  password: 'your_password',
 	  apiServerPort: 80
 	}
 	````
