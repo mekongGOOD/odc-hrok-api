@@ -91,9 +91,9 @@
 			// 	name: 'Female',
 			// 	data: [1656154, 1787564]
 			// }]
-			series: serieData,
+			series: serieData
 
-			__test_series: [
+			/*__test_series: [
 				{
 					name: 'P1 - Male',
 					data: [-1746181, - 1884428],
@@ -122,7 +122,7 @@
 					data: [1656154, 1787564],
 					stack: 'P3'
 				}
-			]
+			]*/
 		});
 
 		return chart;
