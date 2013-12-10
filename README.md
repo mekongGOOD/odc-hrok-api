@@ -114,7 +114,7 @@ After a new mySQL database table is added, then perform the following steps:
 **Analysts/Consultants**
 <br/>Josh Lette
 <br/>Bronwyn Dennis
-<br/>David Han
+<br/>David Han Sze Chuen
 <br/>Mark Collins
 	
 **Developers**
