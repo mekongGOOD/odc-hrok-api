@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('wp_map_census_2008_villages', { 
+  return sequelize.define('wp_map_census_2008_villages', {
     CODE: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -264,7 +264,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.FLOAT,
       allowNull: false,
       defaultValue: '2008',
-	  canQuery : true
+      canQuery : true
     },
     related_docs: {
       type: DataTypes.STRING,
