@@ -102,7 +102,7 @@ server.get(/.*/, restify.serveStatic({
 }));
 
 
-server.listen(config.apiServerPort, function() {
+server.listen(config.apiServerPort || 80, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
 
