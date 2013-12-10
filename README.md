@@ -43,19 +43,24 @@ The Open Data movement is based on the simple premise that data collected for pu
 
 5. Configure the database settings in models/config.js with **your** database access details:
 
-  `config.db = 'xxxx';  
-  config.userName = 'xxxx';  
-  config.password = 'xxxx';`
+	````javascript
+	var config = {
+	  db: 'odc',
+	  userName: 'root',
+	  password: 'xxxx',
+	  apiServerPort: 80
+	}
+	````
 
 6. Run the server:
 
-  `cd odc-hrok-api`
+	````
+	cd odc-hrok-api
+  npm install
+  nodejs server.js
+  ````
   
-  `npm install`
-  
-  `nodejs server.js`
-  
-  You shold see something like;
+  You should see something like;
   
   `restify listening at http://0.0.0.0`
   
@@ -69,7 +74,7 @@ To retrieve the census 2008 data (by district) use the following URL in your web
   
   You should see some **JSON** data output such as:
 
-  `[{"code":"0102", "name":"Mongkol Borei", "totpop":139315, "males":67967, "females":71348, "density":172.6, "sexratio":95.3, "t_lit15":84.27, "m_lit15":90.61, "f_lit15":78.52, "dependency":67, "pop1564":83406, "mal1564":39950, "fem1564":43456, "fem1549":35905, "tothh":29113, "avg_hs":4.8, "fheads":21.7, "cw_ratio":402.6, "d_own":26930, "d_rent":132, "d_free":1837, "d_oth":151, "t_active":61.08, "m_active":63.95, "f_active":58.38, "t_primsec":77.98, "t_secsec":6.72, "t_tersec":15.31, "m_primsec":75.39, "m_secsec":7.87, "m_tersec":16.74, "f_primsec":80.67, "f_secsec":5.52, "f_tersec":13.81, "t_attend":30.05, "m_attend":32.17, "f_attend":28.05, "t_noeduc":0, "m_noeduc":405, "f_noeduc":576, "m_see":367, "m_speak":116, "m_hear":104, "m_move":804, "m_mental":213, "f_see":375, "f_speak":107, "f_hear":114, "f_move":463, "f_mental":197, "t_uer":1.55, "m_uer":1.16, "f_uer":1.95, "year":2008, "related_docs":"", "last_update":"2012-08-02T03:02:14.000Z"}, ...`
+  > [{"code":"0102", "name":"Mongkol Borei", "totpop":139315, "males":67967, "females":71348, "density":172.6, "sexratio":95.3, "t_lit15":84.27, "m_lit15":90.61, "f_lit15":78.52, "dependency":67, "pop1564":83406, "mal1564":39950, "fem1564":43456, "fem1549":35905, "tothh":29113, "avg_hs":4.8, "fheads":21.7, "cw_ratio":402.6, "d_own":26930, "d_rent":132, "d_free":1837, "d_oth":151, "t_active":61.08, "m_active":63.95, "f_active":58.38, "t_primsec":77.98, "t_secsec":6.72, "t_tersec":15.31, "m_primsec":75.39, "m_secsec":7.87, "m_tersec":16.74, "f_primsec":80.67, "f_secsec":5.52, "f_tersec":13.81, "t_attend":30.05, "m_attend":32.17, "f_attend":28.05, "t_noeduc":0, "m_noeduc":405, "f_noeduc":576, "m_see":367, "m_speak":116, "m_hear":104, "m_move":804, "m_mental":213, "f_see":375, "f_speak":107, "f_hear":114, "f_move":463, "f_mental":197, "t_uer":1.55, "m_uer":1.16, "f_uer":1.95, "year":2008, "related_docs":"", "last_update":"2012-08-02T03:02:14.000Z"}, ...
   
 
 ##Adding new datasets (database tables)
