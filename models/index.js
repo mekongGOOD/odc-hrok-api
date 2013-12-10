@@ -1,5 +1,5 @@
 var Sequelize = require('sequelize');
-var config = require('./config');
+var config = require('../config');
 var sequelize = new Sequelize(config.db, config.userName, config.password, {
   define: {
     freezeTableName: true
