@@ -1,8 +1,8 @@
-var config = {}
-
-config.db = 'odc';
-config.userName = 'xxxx';
-config.password = 'xxxx';
+var config = {
+	db: 'odc',
+	userName: 'root',
+	password: 'xxxx'
+}
 
 module.exports = config;
 
