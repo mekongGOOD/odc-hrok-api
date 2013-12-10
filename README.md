@@ -37,17 +37,17 @@ The Open Data movement is based on the simple premise that data collected for pu
 
   `git clone https://github.com/mekongGOOD/odc-hrok-api`
 
-4. Copy models/config.js.example to models/config.js.
+4. Copy config.js.example to config.js.
 
-  `cp models/config.js.example models/config.js`
+  `cp config.js.example config.js`
 
-4. Configure the database settings in models/config.js with **your** database access details:
+5. Configure the database settings in models/config.js with **your** database access details:
 
   `config.db = 'xxxx';  
   config.userName = 'xxxx';  
   config.password = 'xxxx';`
 
-5. Run the server:
+6. Run the server:
 
   `cd odc-hrok-api`
   
@@ -59,7 +59,7 @@ The Open Data movement is based on the simple premise that data collected for pu
   
   `restify listening at http://0.0.0.0`
   
-6. **Test the API:** 
+7. **Test the API:**
 
 View the API homepage in your web browser http://mysite.com/
 
