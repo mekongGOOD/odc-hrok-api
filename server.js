@@ -1,6 +1,7 @@
 var restify = require('restify');
 var Sequelize = require('sequelize');
 var models = require('./models');
+var SERVER_PORT = 80;
 
 function lowerCase(obj) {
   var newObj = {}
@@ -101,7 +102,7 @@ server.get(/.*/, restify.serveStatic({
 }));
 
 
-server.listen(80, function() {
+server.listen(SERVER_PORT, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
 
