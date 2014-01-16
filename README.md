@@ -4,7 +4,7 @@ This is an API for [Open Development Cambodia (ODC)](http://www.opendevelopmentc
 
 The Random Hacks of Kindness (RHoK) url is [http://www.rhoksydney.org/](http://www.rhoksydney.org/ "").
 
-<br/>
+
 <hr/>
 
 ![rhok.png](_markdown_images/rhok.png "")
@@ -19,7 +19,7 @@ Open Development Cambodia (ODC) is an non-prfot organisation based in Phnom Penh
 
 The Open Data movement is based on the simple premise that data collected for public interest should be publicly available to everyone to use and republish as they wish – without restrictions. ODC does not promote any particular perspective, agenda or bias other than to provide objective information about Cambodia and its development.
 
-<br/>
+
 <hr/>
 #Instructions
 
@@ -112,14 +112,16 @@ After a new mySQL database table is added, then perform the following steps:
 
     
 **Analysts/Consultants**
-<br/>Josh Lette
-<br/>Bronwyn Dennis
-<br/>David Han Sze Chuen
-<br/>Mark Collins
+<br/>&nbsp;&nbsp;Josh Lette
+<br/>&nbsp;&nbsp;Bronwyn Dennis
+<br/>&nbsp;&nbsp;David Han Sze Chuen
 	
 **Developers**
-<br/>Laurie Tuch
-<br/>Tri-Hanh Pham
+<br/>&nbsp;&nbsp;Laurie Tuch
+<br/>&nbsp;&nbsp;Tri-Hanh Pham
+<br/>&nbsp;&nbsp;David Han Sze Chuen
+<br/>&nbsp;&nbsp;Ian Scrivener
+
 	
 **Project Leader**
-<br/>Ian Scrivener
+<br/>&nbsp;&nbsp;Ian Scrivener
